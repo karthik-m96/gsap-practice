@@ -7,10 +7,17 @@ const GsapStagger = () => {
     gsap.to(".stagger-box", {
       y: 250,
       rotation: 360,
-      borderRadius: '50%',
+      borderRadius: '100%',
       repeat: -1,
       yoyo: true,
-      duration: 2
+      duration: 2,
+      stagger: {
+        amount: 1.5,
+        axis: 'y',
+        grid: [2, 1],
+        from: 'center',
+        ease: 'circ.inOut'
+      }
     })
   }, [])
 
